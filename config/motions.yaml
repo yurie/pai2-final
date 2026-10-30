@@ -1,0 +1,22 @@
+# Tune these small movements in Gazebo before regular use.
+motion:
+  arm_topic: /crane_plus_arm_controller/joint_trajectory
+  gripper_topic: /crane_plus_gripper_controller/joint_trajectory
+  arm_joints: [crane_plus_joint1, crane_plus_joint2, crane_plus_joint3, crane_plus_joint4]
+  gripper_joints: [crane_plus_joint_hand]
+  max_duration_sec: 15.0
+  max_velocity_rad_s: 0.5
+  arm:
+    # Return to the pose used when the Gazebo model is first spawned.
+    home: [0.0, 0.0, 0.0, 0.0]
+    celebrate: [0.0, -1.16, -2.01, -0.73]
+    shake_left: [-0.20, 0.0, 0.0, 0.0]
+    shake_right: [0.20, 0.0, 0.0, 0.0]
+  gripper:
+    home: [0.0]
+    open: [-0.52]
+    closed: [0.17]
+  move_time_sec: 4.5
+  shake_move_time_sec: 2.0
+  hold_time_sec: 1.0
+  shake_cycles: 2
